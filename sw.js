@@ -1,9 +1,9 @@
 importScripts('js/sw-utils.js');
 
 
-const CACHE_ESTATICO = 'cache-estatico-v1';
-const CACHE_DINAMICO = 'cache-dinamico-v1';
-const CACHE_INMUTABLE = 'cache-inmutable-v1';
+const CACHE_ESTATICO = 'PWA-cache-estatico-v1';
+const CACHE_DINAMICO = 'PWA-cache-dinamico-v1';
+const CACHE_INMUTABLE = 'PWA-cache-inmutable-v1';
 
 
 const APP_SHELL = [
