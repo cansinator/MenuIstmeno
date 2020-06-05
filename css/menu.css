@@ -1,5 +1,5 @@
 #bodymenu {
-    background: url(../img/menu-1.jpg) #fafafa;
+    background-color: #FF8901;
     width: 100%;
     height: 500px;
     background-size: cover;
@@ -21,7 +21,7 @@
 }
 
 .menu-container {
-    max-width: 310px;
+    max-width: 100%;
     border-radius: 5px;
     width: 85%;
     background: #fff;

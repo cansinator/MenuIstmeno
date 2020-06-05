@@ -38,11 +38,17 @@ const APP_SHELL_INMUTABLE = [
     'js/booklet/jquery.booklet.latest.min.js',
     'js/booklet/jquery.easing.1.3.js',
     'js/booklet/jquery.min.js',
+    'js/swiper/swiper.js',
+    'js/swiper/swiper.min.js',
+    'js/swiper/swiper.js.map',
+    'js/swiper/swiper.min.js.map',
     'css/booklet/images/arrow-next.png',
     'css/booklet/images/arrow-prev.png',
     'css/booklet/images/shadow-top-back.png',
     'css/booklet/images/shadow-top-forward.png',
     'css/booklet/images/shadow.png',
+    'css/swiper/swiper.css',
+    'css/swiper/swiper.min.css',
     'css/menu.css',
     'css/reset.css'
 ];
@@ -87,14 +93,7 @@ self.addEventListener('activate', e => {
 
 });
 
-/* self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        fetch(event.request).catch(function () {
-            return caches.match(event.request);
-        })
-    );
-}); 
- */
+
 self.addEventListener('fetch', e => {
     const responseSw = caches.match(e.request).then(respCache => {
         if (respCache) {

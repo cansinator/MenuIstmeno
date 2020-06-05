@@ -2,8 +2,8 @@
     "short_name": "Carnitas El Istmeño",
     "name": "Menu El Istmeño",
     "start_url": "menu.html",
-    "background_color": "#3498db",
-    "theme_color": "#3498db",
+    "background_color": "#FF8901",
+    "theme_color": "#FF8901",
     "display": "standalone",
     "orientation": "portrait",
     "icons": [
