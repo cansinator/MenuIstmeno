@@ -25,6 +25,7 @@ const APP_SHELL = [
     'img/icons/icon-72x44.png',
     'img/icons/icon-96x59.png',
     'menu.html',
+    'js/app.js',
     'js/menu.js'
 ];
 
@@ -86,24 +87,11 @@ self.addEventListener('activate', e => {
 
 });
 
-/* self.addEventListener('fetch', function (event) {
+self.addEventListener('fetch', function (event) {
     event.respondWith(
         fetch(event.request).catch(function () {
             return caches.match(event.request);
         })
     );
-}); */
+});
 
-self.addEventListener('fetch', e => {
-    const responseSw = caches.match(e.request).then(respCache => {
-        if (respCache) {
-            return respCache;
-        }
-        else {
-            fetch(e.request).then(respNetwork => {
-                return updateDynamicCache(CACHE_DINAMICO, e.request, respNetwork);
-            });
-        }
-    });
-    e.respondWith(responseSw);
-}); 
