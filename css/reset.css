@@ -1,0 +1,192 @@
+/* http://hugocesarvelozgonzalez/css/reset/
+   http://joseaureliocarrera/css/reset/
+   v2.0 | 2019
+   License: none (public domain)
+*/
+
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	outline: none;
+	vertical-align: baseline;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background: #fff;
+	font-family: 'Roboto-Regular';
+	font-weight: normal;
+	font-size: 1em;
+	color: #5f5f5f;
+	width: 100%;
+	display: inline-block;	
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input::-ms-clear {
+width: 0px;
+height: 0px;
+} 
+img{
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+	color: #468cc7;
+}
+/************************************************/
+.wrapper {
+	width: 100%;
+	max-width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.display_table {
+	display: table;
+	width: 100%;
+}
+.display_tCell {
+	width: 50%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.display_inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+.display_block {
+	display: block;
+	vertical-align: middle;
+}
+.tLeft {
+	text-align: left;
+}
+.tCenter {
+	text-align: center;
+}
+.tRight {
+	text-align: right;
+}
+/************************************************/
+.borde { 
+	border: solid 1px #bbbbbb;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin: auto;
+}
+header {
+	padding: 5px 0;
+	background: #00284d;
+}
+.contenedor {
+	padding: 15px;
+}
+.text{
+	color: #fff;
+	font-size: 1em;
+}
+.logo img{
+	width: 130px;
+}
+footer {
+	bottom: 0;
+	position: absolute;;
+	background: #fafafa;
+	color: #777;
+	font-size: 0.75em;
+	line-height: 1.25em;
+	padding: 5px 0;
+	width: 100%;
+	z-index: 700;
+}
+.txtDatosSearch{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/**********************************************//*INPUTS TEXT & NUMBER*/
+table.textbox td.input input[type='text'] {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    opacity: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+/**********************************************//*FLEXBOX*/
+.padre{
+	display: flex;
+	height: 10%;
+	align-items:center;
+	margin: 3px;
+}
+.hijo{
+	align-items: center;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	flex-grow: 1;
+	margin:2px;
+	height: 100%;
+    justify-content: center;
+    text-align: center;
+
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+@media all and (max-width: 600px) {
+	.padre { 
+		flex-direction: column; 
+		height: auto;
+	}
+	.hijo{
+		width: 100%;
+		height: 30px;
+	}
+}
+/**********************************************//*FIN FLEXBOX*/

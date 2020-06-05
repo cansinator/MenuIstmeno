@@ -42,7 +42,9 @@ const APP_SHELL_INMUTABLE = [
     'css/booklet/images/arrow-prev.png',
     'css/booklet/images/shadow-top-back.png',
     'css/booklet/images/shadow-top-forward.png',
-    'css/booklet/images/shadow.png'
+    'css/booklet/images/shadow.png',
+    'css/menu.css',
+    'css/reset.css'
 ];
 
 
