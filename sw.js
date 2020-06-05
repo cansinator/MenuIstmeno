@@ -16,14 +16,14 @@ const APP_SHELL = [
     'img/menu-6.jpg',
     'img/menu-7.jpg',
     'img/menu-8.jpg',
-    'img/icons/icon-128x78.png',
-    'img/icons/icon-144x88.png',
-    'img/icons/icon-152x93.png',
-    'img/icons/icon-192x118.png',
-    'img/icons/icon-384x235.png',
-    'img/icons/icon-512x313.png',
-    'img/icons/icon-72x44.png',
-    'img/icons/icon-96x59.png',
+    'img/icons/icon-128x128.png',
+    'img/icons/icon-144x144.png',
+    'img/icons/icon-152x152.png',
+    'img/icons/icon-192x192.png',
+    'img/icons/icon-384x384.png',
+    'img/icons/icon-512x512.png',
+    'img/icons/icon-72x72.png',
+    'img/icons/icon-96x96.png',
     'menu.html',
     'js/app.js',
     'js/menu.js'
@@ -85,15 +85,15 @@ self.addEventListener('activate', e => {
 
 });
 
-self.addEventListener('fetch', function (event) {
+/* self.addEventListener('fetch', function (event) {
     event.respondWith(
         fetch(event.request).catch(function () {
             return caches.match(event.request);
         })
     );
 }); 
-
-/* self.addEventListener('fetch', e => {
+ */
+self.addEventListener('fetch', e => {
     const responseSw = caches.match(e.request).then(respCache => {
         if (respCache) {
             return respCache;
@@ -105,4 +105,4 @@ self.addEventListener('fetch', function (event) {
         }
     });
     e.respondWith(responseSw);
-});  */
+});  
