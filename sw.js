@@ -40,8 +40,6 @@ const APP_SHELL_INMUTABLE = [
     'js/booklet/jquery.min.js',
     'css/booklet/images/arrow-next.png',
     'css/booklet/images/arrow-prev.png',
-    'css/booklet/images/closedhand.cur',
-    'css/booklet/images/openhand.cur',
     'css/booklet/images/shadow-top-back.png',
     'css/booklet/images/shadow-top-forward.png',
     'css/booklet/images/shadow.png'
@@ -93,5 +91,18 @@ self.addEventListener('fetch', function (event) {
             return caches.match(event.request);
         })
     );
-});
+}); 
 
+/* self.addEventListener('fetch', e => {
+    const responseSw = caches.match(e.request).then(respCache => {
+        if (respCache) {
+            return respCache;
+        }
+        else {
+            fetch(e.request).then(respNetwork => {
+                return updateDynamicCache(CACHE_DINAMICO, e.request, respNetwork);
+            });
+        }
+    });
+    e.respondWith(responseSw);
+});  */
