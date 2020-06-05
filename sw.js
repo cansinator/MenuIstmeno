@@ -36,7 +36,14 @@ const APP_SHELL_INMUTABLE = [
     'js/booklet/jquery.booklet.latest.js',
     'js/booklet/jquery.booklet.latest.min.js',
     'js/booklet/jquery.easing.1.3.js',
-    'js/booklet/jquery.min.js'
+    'js/booklet/jquery.min.js',
+    'css/booklet/images/arrow-next.png',
+    'css/booklet/images/arrow-prev.png',
+    'css/booklet/images/closedhand.cur',
+    'css/booklet/images/openhand.cur',
+    'css/booklet/images/shadow-top-back.png',
+    'css/booklet/images/shadow-top-forward.png',
+    'css/booklet/images/shadow.png'
 ];
 
 
