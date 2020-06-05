@@ -1,3 +1,3 @@
 # MenuIstmeno
 
-Menú virtual de Carnitas El Istmeños
+Menu virtual de Carnitas El Istmeno
