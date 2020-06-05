@@ -56,7 +56,7 @@ $(document).ready(function () {
     ];
 
     features.forEach(function (feature) {
-        var page = "<div><a><img src='" + menus[feature.type].icon + "'></a></div>";
+        var page = "<div><a><img style='width: 100%; height: 100%;' src='" + menus[feature.type].icon + "'></a></div>";
         $('#mybook').append(page);
     });
 
