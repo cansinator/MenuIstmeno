@@ -56,7 +56,27 @@ $(document).ready(function () {
     ];
 
     features.forEach(function (feature) {
-        var page = "<div class='swiper-slide' style='background-image:url(~/../" + menus[feature.type].icon +  ")'></div>";
+        var page = "<div class='swiper-slide' style='background-image:url(~/../" + menus[feature.type].icon + ")'></div>";
         $('#menuSwiper').append(page);
     });
+
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+
+    swiper.update();
 });
+
