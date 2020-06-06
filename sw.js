@@ -50,7 +50,15 @@ const APP_SHELL_INMUTABLE = [
     'css/swiper/swiper.css',
     'css/swiper/swiper.min.css',
     'css/menu.css',
-    'css/reset.css'
+    'css/reset.css',
+    'css/font-awesome.css',
+    'css/font-awesome.min.css',
+    'fonts/fontawesome-webfont.eot',
+    'fonts/fontawesome-webfont.svg',
+    'fonts/fontawesome-webfont.ttf',
+    'fonts/fontawesome-webfont.woff',
+    'fonts/fontawesome-webfont.woff2',
+    'fonts/FontAwesome.otf'
 ];
 
 
