@@ -29,29 +29,26 @@
 
 <body id="bodymenu">
   <section class="contenido_principal">
-      <div class="wrappercontent">
-          <div class="borde">
-              <div class="contenedor">
-                  <div class="contenidogeneral">
-                      <div class="menu-container">
-                          <!-- Swiper -->
-                          <div class="swiper-container">
-                              <div id="menuSwiper" class="swiper-wrapper">
-                              </div>
-                              <!-- If we need pagination -->
-                              <div class="swiper-pagination"></div>
-
-                              <!-- If we need navigation buttons -->
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
-                              <!-- If we need scrollbar -->
-                              <div class="swiper-scrollbar"></div>
-                          </div>
-                      </div>
-                  </div>
+    <div class="wrappercontent">
+      <div class="borde">
+        <div class="contenedor">
+          <div class="contenidogeneral">
+            <div class="menu-container">
+              <!-- Swiper -->
+              <div class="swiper-container">
+                <div id="menuSwiper" class="swiper-wrapper">
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
               </div>
+            </div>
           </div>
+        </div>
       </div>
+    </div>
   </section>
 </body>
 <script src="js/booklet/jquery.min.js"></script>
@@ -65,9 +62,11 @@
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      effect: 'fade',
       pagination: {
         el: '.swiper-pagination',
-        type: 'progressbar',
+        clickable: true,
       },
       navigation: {
         nextEl: '.swiper-button-next',
@@ -75,4 +74,5 @@
       },
     });
 </script>
+
 </html>
