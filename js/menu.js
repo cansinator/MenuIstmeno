@@ -1,14 +1,3 @@
-$(document).on("pagecreate", "#menu-container", function() {
-    $(this).toggleClass("size-hidden",true);
-    var swiper = new Swiper('.swiper-container', {
-      pagination: '.swiper-pagination',
-      slidesPerView: 1,
-      paginationClickable: true,
-      spaceBetween: 30
-    });
-    $(this).toggleClass("size-hidden",false);
-  });
-
 $(document).ready(function () {
     var iconBase = 'img/';
 
