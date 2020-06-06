@@ -56,7 +56,7 @@ $(document).ready(function () {
     ];
 
     features.forEach(function (feature) {
-        var page = "<div class='swiper-slide' style='background-image:url(~/../" + menus[feature.type].icon + ")'><div style='text-align: right;'><a href='https://wa.me/522871555737'><i class='fa fa-whatsapp fa-5x' style='color: white;' aria-hidden='true'></i></a></div></div>";
+        var page = "<div class='swiper-slide' style='background-image:url(~/../" + menus[feature.type].icon + ")'><div style='text-align: right;'><a href='https://wa.me/522871555737'><i class='fa fa-whatsapp fa-4x' style='color: white;' aria-hidden='true'></i><br><a style='color: white; font-size: 12px; font-weight: bold;'>Toca Aquí</a></a></div></div>";
         $('#menuSwiper').append(page);
     });
 
