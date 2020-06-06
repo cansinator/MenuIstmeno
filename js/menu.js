@@ -56,7 +56,7 @@ $(document).ready(function () {
     ];
 
     features.forEach(function (feature) {
-        var page = "<div class='swiper-slide'><a><img src='" + menus[feature.type].icon + "'></a></div>";
+        var page = "<div class='swiper-slide' style='background-image:url(../../" + menus[feature.type].icon +  ")'></div>";
         $('#menuSwiper').append(page);
     });
 });
