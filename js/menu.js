@@ -111,5 +111,14 @@ function cargaMap() {
             icon: icons[feature.type].icon,
             map: map
         });
+
+        var ventana = '<div class="info_content"><h3>Carnitas El Istmeño</h3><p>aAv. Francisco y Madero Esq. 5 de Febrero, Colonia María Eugenia.</p></div>'
+        var infoWindow = new google.maps.InfoWindow(), marker, i;
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+          return function () {
+            infoWindow.setContent(ventana);
+            infoWindow.open(map, marker);
+          }
+        })(marker, i));
     });
 }
