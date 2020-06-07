@@ -86,7 +86,7 @@ function initMap() {
 
 function cargaMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
+        zoom: 13,
         center: new google.maps.LatLng(18.089305, -96.135304),
         mapTypeId: 'roadmap'
     });
@@ -94,15 +94,23 @@ function cargaMap() {
     var iconBase = 'img/';
 
     var icons = {
-        sucursal: {
-            icon: iconBase + 'mapicon.png'
+        sucursal1: {
+            icon: iconBase + 'mapicon.png',
+            info: '<h3>Carnitas El Istmeño</h3><p>Av. Francisco y Madero Esq. 5 de Febrero, Colonia María Eugenia.</p>'
+        },
+        sucursal2: {
+            icon: iconBase + 'mapicon.png',
+            info: '<h3>Carnitas El Istmeño</h3><p>Av. Libertad Esq. Rayon, Colonia Centro.</p>'
         }
     };
     var features = [
         {
             position: new google.maps.LatLng(18.089305, -96.135304),
-            type: 'sucursal'
-        }
+            type: 'sucursal1'
+        }, {
+            position: new google.maps.LatLng(18.082747, -96.120054),
+            type: 'sucursal2'
+        },
     ];
     // Create markers.
     features.forEach(function (feature) {
@@ -112,13 +120,13 @@ function cargaMap() {
             map: map
         });
 
-        var ventana = '<div class="info_content"><h3>Carnitas El Istmeño</h3><p>aAv. Francisco y Madero Esq. 5 de Febrero, Colonia María Eugenia.</p></div>'
+        var ventana = '<div class="info_content">' + icons[feature.type].info + '</div>'
         var infoWindow = new google.maps.InfoWindow(), marker, i;
         google.maps.event.addListener(marker, 'click', (function (marker, i) {
-          return function () {
-            infoWindow.setContent(ventana);
-            infoWindow.open(map, marker);
-          }
+            return function () {
+                infoWindow.setContent(ventana);
+                infoWindow.open(map, marker);
+            }
         })(marker, i));
     });
 }
