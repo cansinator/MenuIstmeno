@@ -8,6 +8,7 @@ const CACHE_INMUTABLE = 'PWA-cache-inmutable-v1';
 
 const APP_SHELL = [
     'img/favicon.png',
+    'img/mapicon.png',
     'img/menu-1.jpg',
     'img/menu-2.jpg',
     'img/menu-3.jpg',
