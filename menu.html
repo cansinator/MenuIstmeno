@@ -27,59 +27,27 @@
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="manifest" href="manifest.json">
-  <style>
-    body {
-      background: #fff;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 300px;
-      height: 300px;
-    }
-
-    .slides {
-      height: auto;
-    }
-
-    .swiper-wrapper {
-      position: relative;
-    }
-  </style>
 </head>
 
-<body id="bodymenu">
-  <section class="contenido_principal">
-    <div class="wrappercontent">
-      <div class="borde">
-        <div class="contenedor">
-          <div class="contenidogeneral">
-            <div class="menu-container">
-              <div class="swiper-container">
-                <div id="menuSwiper" class="swiper-wrapper">
-                  <div class='swiper-slide' id="map"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<body>
+  <div class="swiper-container">
+    <div id="menuSwiper" class="swiper-wrapper">
     </div>
-  </section>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+<!--   <footer class="footapp">
+    <section class="contfooter">
+      <div class="iconappfoot">
+        <i class="fa fa-whatsapp fa-6"></i>
+        <p>Envíanos un WhatsApp</p>
+      </div>
+      <div class="iconappfoot">
+        <i class="fa fa-phone fa-6"></i>
+        <p>Llamanos</p>
+      </div>
+    </section>
+  </footer> -->
 </body>
 <script src="js/booklet/jquery.min.js"></script>
 <script> window.jQuery || document.write('<script src="js/booklet/jquery-2.1.0.min.js"><\/script>') </script>
@@ -89,5 +57,6 @@
 <script src="js/app.js"></script>
 <script src="js/menu.js"></script>
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjZ_ekZXiQ5m1xCmr77GSio2Qq6WOVT8Q&callback=initMap"></script>
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjZ_ekZXiQ5m1xCmr77GSio2Qq6WOVT8Q&callback=initMap"></script>
+
 </html>

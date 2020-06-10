@@ -3,6 +3,9 @@ function initMap() {
         var iconBase = 'img/';
 
         var menus = {
+            pagina0: {
+                icon: iconBase + 'menu-0.jpg'
+            },
             pagina1: {
                 icon: iconBase + 'menu-1.jpg'
             },
@@ -19,17 +22,36 @@ function initMap() {
                 icon: iconBase + 'menu-5.jpg'
             },
             pagina6: {
-                icon: iconBase + 'menu-6.jpg'
+                icon: iconBase + 'menu-6.jpg',
+                cel: "href='https://wa.me/522871057572'",
+                tel: "href='tel: 522871057572'"
             },
             pagina7: {
-                icon: iconBase + 'menu-7.jpg'
+                icon: iconBase + 'menu-7.jpg',
+                cel: "href='https://wa.me/522871057572'",
+                tel: "href='tel: 529721110889'"
             },
             pagina8: {
-                icon: iconBase + 'menu-8.jpg'
+                icon: iconBase + 'menu-8.jpg',
+                cel: "href='https://wa.me/522886907303'",
+                tel: "href='tel: 529721075154'"
+            },
+            pagina9: {
+                icon: iconBase + 'menu-9.jpg',
+                cel: "href='https://wa.me/522299571515'",
+                tel: "href='tel: 522299571515'"
+            },
+            pagina10: {
+                icon: iconBase + 'menu-10.jpg',
+                cel: "href='https://wa.me/522881285048'",
+                tel: "href='tel: 522881285048'"
             }
         };
 
         var features = [
+            {
+                type: 'pagina0'
+            },
             {
                 type: 'pagina1'
             },
@@ -53,30 +75,59 @@ function initMap() {
             },
             {
                 type: 'pagina8'
+            },
+            {
+                type: 'pagina9'
+            },
+            {
+                type: 'pagina10'
             }
         ];
 
+        var index = 0;
+
         features.forEach(function (feature) {
-            var page = "<div class='swiper-slide' style='background-image:url(~/../" + menus[feature.type].icon + ")'><div style='text-align: right;'><a href='https://wa.me/522871555737'><i class='fa fa-whatsapp fa-4x' style='color: white;' aria-hidden='true'></i><br><a style='color: white; font-size: 12px; font-weight: bold;'>Toca Aquí</a></a></div></div>";
+            var infoTelFooter = "";
+            if (index >= 6)
+                infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: white;'></i><p style='color: white;' >Envíanos un WhatsApp</p></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: white;'></i><p style='color: white;'>Llamanos</p></a></div></section></footer>";
+            var page = "<div class='swiper-slide'>" + infoTelFooter + "<img style='-webkit-user-select: none;margin: auto;cursor: zoom-in;' src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
             $('#menuSwiper').append(page);
+
+            index++;
         });
+        $('#menuSwiper').append("<div class='swiper-slide' id='map'></div>");
 
         cargaMap();
 
         var swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
+            slidesPerView: 1,
+            spaceBetween: 10,
+            // init: false,
             pagination: {
                 el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1366: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
             }
         });
 
