@@ -6,7 +6,7 @@ const CACHE_DINAMICO = 'PWA-cache-dinamico-v1';
 const CACHE_INMUTABLE = 'PWA-cache-inmutable-v1';
 
 
-const APP_SHELL = [
+const APP_SHELL_INMUTABLE  = [
     'img/favicon.png',
     'img/mapicon.png',
     'img/menu-0.jpg',
@@ -39,7 +39,7 @@ const APP_SHELL = [
     'js/menu.js'
 ];
 
-const APP_SHELL_INMUTABLE = [
+const APP_SHELL  = [
     'css/booklet/jquery.booklet.latest.css',
     'js/booklet/jquery-2.1.0.min.js',
     'js/booklet/jquery-ui-1.10.4.min.js',
