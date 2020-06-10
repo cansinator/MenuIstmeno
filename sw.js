@@ -28,6 +28,12 @@ const APP_SHELL = [
     'img/icons/icon-512x512.png',
     'img/icons/icon-72x72.png',
     'img/icons/icon-96x96.png',
+    'img/apple-icons/apple-launch-640x1136.jpg',
+    'img/apple-icons/apple-launch-750x1334.jpg',
+    'img/apple-icons/apple-launch-828x1792.jpg',
+    'img/apple-icons/apple-launch-1125x2436.jpg',
+    'img/apple-icons/apple-launch-1242x2208.jpg',
+    'img/apple-icons/apple-launch-1242x2688.jpg',
     'menu.html',
     'js/app.js',
     'js/menu.js'
