@@ -15,19 +15,28 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
-	<link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
-	<link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
-	
-	<link rel="apple-touch-startup-image" href="img/apple-icons/apple-launch-640x1136.png">	
-	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="img/apple-icons/apple-launch-1242x2688.png"><!-- iPhone Xs Max (1242px x 2688px) --> 
-	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="img/apple-icons/apple-launch-828x1792.png"><!-- iPhone Xr (828px x 1792px) --> 
-	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="img/apple-icons/apple-launch-1125x2436.png"><!-- iPhone X, Xs (1125px x 2436px) --> 
-	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="img/apple-icons/apple-launch-1242x2208.png"><!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) --> 
-	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="img/apple-icons/apple-launch-750x1334.png"><!-- iPhone 8, 7, 6s, 6 (750px x 1334px) --> 
-	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
 
+  <link rel="apple-touch-startup-image" href="img/apple-icons/apple-launch-640x1136.png">
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+    href="img/apple-icons/apple-launch-1242x2688.png"><!-- iPhone Xs Max (1242px x 2688px) -->
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+    href="img/apple-icons/apple-launch-828x1792.png"><!-- iPhone Xr (828px x 1792px) -->
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    href="img/apple-icons/apple-launch-1125x2436.png"><!-- iPhone X, Xs (1125px x 2436px) -->
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+    href="img/apple-icons/apple-launch-1242x2208.png"><!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    href="img/apple-icons/apple-launch-750x1334.png"><!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,28 +49,23 @@
   <link rel="stylesheet" href="css/swiper/swiper.min.css">
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/modal.css">
   <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
+  <div id="modalbox" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="canvasMap"></div>
+    </div>
+  </div>
   <div class="swiper-container">
     <div id="menuSwiper" class="swiper-wrapper">
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-<!--   <footer class="footapp">
-    <section class="contfooter">
-      <div class="iconappfoot">
-        <i class="fa fa-whatsapp fa-6"></i>
-        <p>Envíanos un WhatsApp</p>
-      </div>
-      <div class="iconappfoot">
-        <i class="fa fa-phone fa-6"></i>
-        <p>Llamanos</p>
-      </div>
-    </section>
-  </footer> -->
 </body>
 <script src="js/booklet/jquery.min.js"></script>
 <script> window.jQuery || document.write('<script src="js/booklet/jquery-2.1.0.min.js"><\/script>') </script>
