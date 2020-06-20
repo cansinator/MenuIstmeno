@@ -30,6 +30,12 @@ function initMap() {
                 icon: iconBase + 'menu-5.jpg'
             },
             pagina6: {
+                icon: iconBase + 'menu-5.jpg'
+            },
+            pagina7: {
+                icon: iconBase + 'menu-5.jpg'
+            },
+            pagina8: {
                 icon: iconBase + 'menu-6.jpg',
                 cel: "href='https://wa.me/522871057572'",
                 tel: "href='tel: 522871057572'",
@@ -37,7 +43,7 @@ function initMap() {
                 info: '<h3>Carnitas El Istmeño</h3><p>Av. Francisco y Madero Esq. 5 de Febrero, Colonia María Eugenia.</p>',
                 iconMap: iconBase + 'mapicon.png'
             },
-            pagina7: {
+            pagina9: {
                 icon: iconBase + 'menu-7.jpg',
                 cel: "href='https://wa.me/522871057572'",
                 tel: "href='tel: 529721110889'",
@@ -45,7 +51,7 @@ function initMap() {
                 info: '<h3>Carnitas El Istmeño</h3><p>Av. Francisco y Madero Esq. 5 de Febrero, Colonia María Eugenia.</p>',
                 iconMap: iconBase + 'mapicon.png'
             },
-            pagina8: {
+            pagina10: {
                 icon: iconBase + 'menu-8.jpg',
                 cel: "href='https://wa.me/522886907303'",
                 tel: "href='tel: 529721075154'",
@@ -53,7 +59,7 @@ function initMap() {
                 info: '<h3>Carnitas El Istmeño</h3><p>HIDALGO No 506-A, Veracruz</p>',
                 iconMap: iconBase + 'mapicon.png'
             },
-            pagina9: {
+            pagina11: {
                 icon: iconBase + 'menu-9.jpg',
                 cel: "href='https://wa.me/522299571515'",
                 tel: "href='tel: 522299571515'",
@@ -61,7 +67,7 @@ function initMap() {
                 info: '<h3>Calle 8, Venustiano Carranza, Carranza 3ra Secc, 94297 Boca del Río, Ver.</p>',
                 iconMap: iconBase + 'mapicon.png'
             },
-            pagina10: {
+            pagina12: {
                 icon: iconBase + 'menu-10.jpg',
                 cel: "href='https://wa.me/522881285048'",
                 tel: "href='tel: 522881285048'",
@@ -104,6 +110,12 @@ function initMap() {
             },
             {
                 type: 'pagina10'
+            },
+            {
+                type: 'pagina11'
+            },
+            {
+                type: 'pagina12'
             }
         ];
 
@@ -111,7 +123,7 @@ function initMap() {
 
         features.forEach(function (feature) {
             var infoTelFooter = "";
-            if (index >= 6) {
+            if (index >= 8) {
                 var tienda = '"' + feature.type + '"';
                 infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: white;'></i><p style='color: white;' >Envíanos un WhatsApp</p></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: white;'></i><p style='color: white;'>Llamanos</p></a></div><div class='iconappfoot'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-map-marker fa-6' style='color: white;'></i><p style='color: white;'>Ubícanos</p></a></div></section></footer>";
             }
