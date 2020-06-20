@@ -30,13 +30,13 @@ function initMap() {
                 icon: iconBase + 'menu-5.jpg'
             },
             pagina6: {
-                icon: iconBase + 'menu-5.jpg'
+                icon: iconBase + 'menu-6.jpg'
             },
             pagina7: {
-                icon: iconBase + 'menu-5.jpg'
+                icon: iconBase + 'menu-7.jpg'
             },
             pagina8: {
-                icon: iconBase + 'menu-6.jpg',
+                icon: iconBase + 'menu-8.jpg',
                 cel: "href='https://wa.me/522871057572'",
                 tel: "href='tel: 522871057572'",
                 position: new google.maps.LatLng(18.089305, -96.135304),
@@ -44,7 +44,7 @@ function initMap() {
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina9: {
-                icon: iconBase + 'menu-7.jpg',
+                icon: iconBase + 'menu-9.jpg',
                 cel: "href='https://wa.me/522871057572'",
                 tel: "href='tel: 529721110889'",
                 position: new google.maps.LatLng(18.082747, -96.120054),
@@ -52,7 +52,7 @@ function initMap() {
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina10: {
-                icon: iconBase + 'menu-8.jpg',
+                icon: iconBase + 'menu-10.jpg',
                 cel: "href='https://wa.me/522886907303'",
                 tel: "href='tel: 529721075154'",
                 position: new google.maps.LatLng(20.5197462, -97.4430313),
@@ -60,7 +60,7 @@ function initMap() {
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina11: {
-                icon: iconBase + 'menu-9.jpg',
+                icon: iconBase + 'menu-11.jpg',
                 cel: "href='https://wa.me/522299571515'",
                 tel: "href='tel: 522299571515'",
                 position: new google.maps.LatLng(19.130268, -96.122766),
@@ -68,7 +68,7 @@ function initMap() {
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina12: {
-                icon: iconBase + 'menu-10.jpg',
+                icon: iconBase + 'menu-12.jpg',
                 cel: "href='https://wa.me/522881285048'",
                 tel: "href='tel: 522881285048'",
                 position: new google.maps.LatLng(18.235195, -96.144031),
