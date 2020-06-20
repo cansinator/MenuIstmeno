@@ -125,7 +125,7 @@ function initMap() {
             var infoTelFooter = "";
             if (index >= 8) {
                 var tienda = '"' + feature.type + '"';
-                infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: white;'></i><p style='color: white;' >Envíanos un WhatsApp</p></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: white;'></i><p style='color: white;'>Llamanos</p></a></div><div class='iconappfoot'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-map-marker fa-6' style='color: white;'></i><p style='color: white;'>Ubícanos</p></a></div></section></footer>";
+                infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: white;'></i><p style='color: white;' >Envíanos un WhatsApp</p></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: white;'></i><p style='color: white;'>Llamanos</p></a></div><div class='iconappfoot'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-map-marker fa-6' style='color: white;'></i><p style='color: white;'>Ubícanos</p></a></div><div class='iconappfoot' style='font-size: 24px;'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-youtube fa-6' style='color: white;'></i></a></div></section></footer>";
             }
             var page = "<div class='swiper-slide'>" + infoTelFooter + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
             $('#menuSwiper').append(page);
