@@ -1,4 +1,10 @@
 var menus = "";
+var player;
+
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function initMap() {
     $(document).ready(function () {
@@ -8,6 +14,7 @@ function initMap() {
         var span = document.getElementsByClassName("close")[0];
         span.onclick = function () {
             modal.style.display = "none";
+            stopVideo();
         }
 
         menus = {
@@ -201,11 +208,13 @@ function initMap() {
         swiper.update();
     });
 }
-var player;
+
 
 function cargaYoutube(pagina) {
+    $('#canvasMap').empty();
 
-    player = new YT.Player('player', {
+    document.getElementById("modalbox").style.display = "block";
+    player = new YT.Player('canvasMap', {
         height: '100%',
         width: '100%',
         videoId: menus[pagina].youtube,
@@ -214,9 +223,7 @@ function cargaYoutube(pagina) {
             'onStateChange': onPlayerStateChange
         }
     });
-
 }
-
 
 function onPlayerReady(event) {
     event.target.playVideo();
@@ -225,7 +232,7 @@ function onPlayerReady(event) {
 var done = false;
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
+        setTimeout(stopVideo, 60000);
         done = true;
     }
 }
@@ -235,6 +242,7 @@ function stopVideo() {
 
 
 function cargaMap(pagina) {
+    $('#canvasMap').empty();
     var marker = [];
 
     marker.forEach(function (m) { m.setMap(null); });
@@ -262,18 +270,3 @@ function cargaMap(pagina) {
     })(marker, i));
 }
 
-document.addEventListener("fullscreenchange", function () {
-    if (!document.fullscreenElement) player.stopVideo();
-}, false);
-
-document.addEventListener("msfullscreenchange", function () {
-    if (!document.msFullscreenElement) player.stopVideo();
-}, false);
-
-document.addEventListener("mozfullscreenchange", function () {
-    if (!document.mozFullScreen) player.stopVideo();
-}, false);
-
-document.addEventListener("webkitfullscreenchange", function () {
-    if (!document.webkitIsFullScreen) player.stopVideo();
-}, false);
