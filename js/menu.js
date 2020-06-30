@@ -16,31 +16,31 @@ function initMap() {
             },
             pagina1: {
                 icon: iconBase + 'menu-1.jpg',
-                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/Dq0Fyz9tyUE' />"
+                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/Dq0Fyz9tyUE' /></div>"
             },
             pagina2: {
                 icon: iconBase + 'menu-2.jpg',
-                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/hXNObvj-m28' />"
+                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/hXNObvj-m28' /></div>"
             },
             pagina3: {
                 icon: iconBase + 'menu-3.jpg',
-                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/gkTM8wXEZG4' />"
+                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/gkTM8wXEZG4' /></div>"
             },
             pagina4: {
                 icon: iconBase + 'menu-4.jpg',
-                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/rX2eEa4LYoM' />"
+                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/rX2eEa4LYoM' /></div>"
             },
             pagina5: {
                 icon: iconBase + 'menu-5.jpg',
-                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/Zl-xOHG8bYM' />"
+                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/Zl-xOHG8bYM' /></div>"
             },
             pagina6: {
                 icon: iconBase + 'menu-6.jpg',
-                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/zJYCm7-4bH8' />"
+                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/zJYCm7-4bH8' /></div>"
             },
             pagina7: {
                 icon: iconBase + 'menu-7.jpg',
-                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/zJYCm7-4bH8' />"
+                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/zJYCm7-4bH8' /></div>"
             },
             pagina8: {
                 icon: iconBase + 'menu-8.jpg',
