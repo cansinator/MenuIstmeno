@@ -238,6 +238,7 @@ function onPlayerStateChange(event) {
 }
 function stopVideo() {
     player.stopVideo();
+    player.destroy();
 }
 
 
