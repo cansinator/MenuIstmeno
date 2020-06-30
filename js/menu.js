@@ -203,6 +203,7 @@ function initMap() {
 }
 
 function cargaYoutube(pagina){
+    $('#canvasMap').empty();
     document.getElementById("modalbox").style.display = "block";
     $('#canvasMap').append( menus[pagina].youtube);
 }
