@@ -201,9 +201,10 @@ function initMap() {
         swiper.update();
     });
 }
+var player;
 
 function cargaYoutube(pagina) {
-    var player;
+
     player = new YT.Player('player', {
         height: '100%',
         width: '100%',
@@ -232,6 +233,7 @@ function stopVideo() {
     player.stopVideo();
 }
 
+
 function cargaMap(pagina) {
     var marker = [];
 
@@ -259,3 +261,19 @@ function cargaMap(pagina) {
         }
     })(marker, i));
 }
+
+document.addEventListener("fullscreenchange", function () {
+    if (!document.fullscreenElement) player.stopVideo();
+}, false);
+
+document.addEventListener("msfullscreenchange", function () {
+    if (!document.msFullscreenElement) player.stopVideo();
+}, false);
+
+document.addEventListener("mozfullscreenchange", function () {
+    if (!document.mozFullScreen) player.stopVideo();
+}, false);
+
+document.addEventListener("webkitfullscreenchange", function () {
+    if (!document.webkitIsFullScreen) player.stopVideo();
+}, false);
