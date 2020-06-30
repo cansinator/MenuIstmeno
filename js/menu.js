@@ -16,31 +16,31 @@ function initMap() {
             },
             pagina1: {
                 icon: iconBase + 'menu-1.jpg',
-                youtube: "target='_blank' href='https://youtu.be/Dq0Fyz9tyUE'"
+                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/Dq0Fyz9tyUE' />"
             },
             pagina2: {
                 icon: iconBase + 'menu-2.jpg',
-                youtube: "target='_blank' href='https://youtu.be/hXNObvj-m28'"
+                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/hXNObvj-m28' />"
             },
             pagina3: {
                 icon: iconBase + 'menu-3.jpg',
-                youtube: "target='_blank' href='https://youtu.be/gkTM8wXEZG4'"
+                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/gkTM8wXEZG4' />"
             },
             pagina4: {
                 icon: iconBase + 'menu-4.jpg',
-                youtube: "target='_blank' href='https://youtu.be/rX2eEa4LYoM'"
+                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/rX2eEa4LYoM' />"
             },
             pagina5: {
                 icon: iconBase + 'menu-5.jpg',
-                youtube: "target='_blank' href='https://youtu.be/Zl-xOHG8bYM'"
+                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/Zl-xOHG8bYM' />"
             },
             pagina6: {
                 icon: iconBase + 'menu-6.jpg',
-                youtube: "target='_blank' href='https://youtu.be/zJYCm7-4bH8'"
+                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/zJYCm7-4bH8' />"
             },
             pagina7: {
                 icon: iconBase + 'menu-7.jpg',
-                youtube: "target='_blank' href='https://youtu.be/zJYCm7-4bH8'"
+                youtube: "<iframe allowFullScreen='allowFullScreen' style='width: 100%; height: 100%;' src='https://www.youtube.com/embed/zJYCm7-4bH8' />"
             },
             pagina8: {
                 icon: iconBase + 'menu-8.jpg',
@@ -139,7 +139,8 @@ function initMap() {
                 var page = "<div class='swiper-slide'>" + infoTelFooter + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
                 $('#menuSwiper').append(page);
             } else if (index >= 1 && index <= 7) {
-                youtube = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].youtube + "><i class='fa fa-youtube fa-6' style='color: black;'></i></a></div></section></footer>";
+                var tienda = '"' + feature.type + '"';
+                youtube = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a onclick='cargaYoutube(" + tienda + ")'><i class='fa fa-youtube fa-6' style='color: black;'></i></a></div></section></footer>";
                 var page = "<div class='swiper-slide'>" + youtube + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
                 $('#menuSwiper').append(page);
             }
@@ -199,6 +200,11 @@ function initMap() {
 
         swiper.update();
     });
+}
+
+function cargaYoutube(pagina){
+    document.getElementById("modalbox").style.display = "block";
+    $('#canvasMap').append( menus[pagina].youtube);
 }
 
 function cargaMap(pagina) {

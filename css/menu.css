@@ -146,7 +146,7 @@
     display: flex;
     justify-content: center;
     background-color: #FF8901;
-    /*opacity:0.6;*/
+    opacity:0.9;
 }
 .contfooter{
     align-items: center;
