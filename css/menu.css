@@ -146,6 +146,7 @@
     display: flex;
     justify-content: center;
     background-color: #FF8901;
+    /*opacity:0.6;*/
 }
 .contfooter{
     align-items: center;

@@ -15,25 +15,32 @@ function initMap() {
                 icon: iconBase + 'menu-0.jpg'
             },
             pagina1: {
-                icon: iconBase + 'menu-1.jpg'
+                icon: iconBase + 'menu-1.jpg',
+                youtube: "target='_blank' href='https://youtu.be/Dq0Fyz9tyUE'"
             },
             pagina2: {
-                icon: iconBase + 'menu-2.jpg'
+                icon: iconBase + 'menu-2.jpg',
+                youtube: "target='_blank' href='https://youtu.be/hXNObvj-m28'"
             },
             pagina3: {
-                icon: iconBase + 'menu-3.jpg'
+                icon: iconBase + 'menu-3.jpg',
+                youtube: "target='_blank' href='https://youtu.be/gkTM8wXEZG4'"
             },
             pagina4: {
-                icon: iconBase + 'menu-4.jpg'
+                icon: iconBase + 'menu-4.jpg',
+                youtube: "target='_blank' href='https://youtu.be/rX2eEa4LYoM'"
             },
             pagina5: {
-                icon: iconBase + 'menu-5.jpg'
+                icon: iconBase + 'menu-5.jpg',
+                youtube: "target='_blank' href='https://youtu.be/Zl-xOHG8bYM'"
             },
             pagina6: {
-                icon: iconBase + 'menu-6.jpg'
+                icon: iconBase + 'menu-6.jpg',
+                youtube: "target='_blank' href='https://youtu.be/zJYCm7-4bH8'"
             },
             pagina7: {
-                icon: iconBase + 'menu-7.jpg'
+                icon: iconBase + 'menu-7.jpg',
+                youtube: "target='_blank' href='https://youtu.be/zJYCm7-4bH8'"
             },
             pagina8: {
                 icon: iconBase + 'menu-8.jpg',
@@ -123,13 +130,19 @@ function initMap() {
 
         features.forEach(function (feature) {
             var infoTelFooter = "";
+            var c = "";
+
             if (index >= 8) {
                 var tienda = '"' + feature.type + '"';
-                infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: white;'></i><p style='color: white;' >Envíanos un WhatsApp</p></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: white;'></i><p style='color: white;'>Llamanos</p></a></div><div class='iconappfoot'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-map-marker fa-6' style='color: white;'></i><p style='color: white;'>Ubícanos</p></a></div><div class='iconappfoot' style='font-size: 24px;'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-youtube fa-6' style='color: white;'></i></a></div></section></footer>";
-            }
-            var page = "<div class='swiper-slide'>" + infoTelFooter + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
-            $('#menuSwiper').append(page);
+                infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-map-marker fa-6' style='color: black;'></i></a></div></section></footer>";
 
+                var page = "<div class='swiper-slide'>" + infoTelFooter + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
+                $('#menuSwiper').append(page);
+            } else if (index >= 1 && index <= 7) {
+                youtube = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].youtube + "><i class='fa fa-youtube fa-6' style='color: black;'></i></a></div></section></footer>";
+                var page = "<div class='swiper-slide'>" + youtube + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
+                $('#menuSwiper').append(page);
+            }
             index++;
         });
         var swiper = new Swiper('.swiper-container', {
@@ -191,7 +204,7 @@ function initMap() {
 function cargaMap(pagina) {
     var marker = [];
 
-    marker.forEach(function(m) { m.setMap(null); });
+    marker.forEach(function (m) { m.setMap(null); });
 
     document.getElementById("modalbox").style.display = "block";
     var map = new google.maps.Map(document.getElementById('canvasMap'), {
