@@ -14,6 +14,9 @@ function initMap() {
         var span = document.getElementsByClassName("close")[0];
         span.onclick = function () {
             modal.style.display = "none";
+            $('body').css({
+                "-webkit-transform": "rotate(270deg)"
+            }); 
             stopVideo();
         }
 
@@ -223,6 +226,10 @@ function cargaYoutube(pagina) {
             'onStateChange': onPlayerStateChange
         }
     });
+
+    $('body').css({
+        "-webkit-transform": "rotate(90deg)"
+    }); 
 }
 
 function onPlayerReady(event) {
