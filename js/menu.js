@@ -16,31 +16,31 @@ function initMap() {
             },
             pagina1: {
                 icon: iconBase + 'menu-1.jpg',
-                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/Dq0Fyz9tyUE' /></div>"
+                youtube: "Dq0Fyz9tyUE"
             },
             pagina2: {
                 icon: iconBase + 'menu-2.jpg',
-                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/hXNObvj-m28' /></div>"
+                youtube: "hXNObvj-m28"
             },
             pagina3: {
                 icon: iconBase + 'menu-3.jpg',
-                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/gkTM8wXEZG4' /></div>"
+                youtube: "gkTM8wXEZG4"
             },
             pagina4: {
                 icon: iconBase + 'menu-4.jpg',
-                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/rX2eEa4LYoM' /></div>"
+                youtube: "rX2eEa4LYoM"
             },
             pagina5: {
                 icon: iconBase + 'menu-5.jpg',
-                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/Zl-xOHG8bYM' /></div>"
+                youtube: "Zl-xOHG8bYM"
             },
             pagina6: {
                 icon: iconBase + 'menu-6.jpg',
-                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/zJYCm7-4bH8' /></div>"
+                youtube: "embed/zJYCm7-4bH8"
             },
             pagina7: {
                 icon: iconBase + 'menu-7.jpg',
-                youtube: "<div class='videoContainer'><iframe allowFullScreen='allowFullScreen' src='https://www.youtube.com/embed/zJYCm7-4bH8' /></div>"
+                youtube: "zJYCm7-4bH8"
             },
             pagina8: {
                 icon: iconBase + 'menu-8.jpg',
@@ -203,9 +203,46 @@ function initMap() {
 }
 
 function cargaYoutube(pagina){
-    $('#canvasMap').empty();
-    document.getElementById("modalbox").style.display = "block";
-    $('#canvasMap').append( menus[pagina].youtube);
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: menus[pagina].youtube,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
 }
 
 function cargaMap(pagina) {
