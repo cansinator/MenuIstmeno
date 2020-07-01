@@ -220,8 +220,10 @@ function cargaYoutube(pagina) {
         events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
-        },
-        origin: window.location.host
+        },playerVars : {
+            'enablejsapi' : 1,
+            'origin' : window.location.host
+        }
     });
 }
 
