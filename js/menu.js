@@ -43,7 +43,7 @@ function initMap() {
             },
             pagina6: {
                 icon: iconBase + 'menu-6.jpg',
-                youtube: "embed/zJYCm7-4bH8"
+                youtube: "klcj5UqyeEM"
             },
             pagina7: {
                 icon: iconBase + 'menu-7.jpg',
@@ -61,13 +61,13 @@ function initMap() {
                 icon: iconBase + 'menu-9.jpg',
                 cel: "href='https://wa.me/522871057572'",
                 tel: "href='tel: 529721110889'",
-                position: new google.maps.LatLng(18.082747, -96.120054),
-                info: '<h3>Carnitas El Istmeño</h3><p>Av. Francisco y Madero Esq. 5 de Febrero, Colonia María Eugenia.</p>',
+                position: new google.maps.LatLng(18.082797, -96.120222),
+                info: '<h3>Carnitas El Istmeño</h3><p>Av. Libertad 472-576, Centro, 68300 San Juan Bautista Tuxtepec, Oax.</p>',
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina10: {
                 icon: iconBase + 'menu-10.jpg',
-                cel: "href='https://wa.me/522886907303'",
+                cel: "href='https://wa.me/529721075154'",
                 tel: "href='tel: 529721075154'",
                 position: new google.maps.LatLng(20.5197462, -97.4430313),
                 info: '<h3>Carnitas El Istmeño</h3><p>HIDALGO No 506-A, Veracruz</p>',
@@ -86,7 +86,7 @@ function initMap() {
                 cel: "href='https://wa.me/522881285048'",
                 tel: "href='tel: 522881285048'",
                 position: new google.maps.LatLng(18.235195, -96.144031),
-                info: '<h3>Calle 8, Venustiano Carranza, Carranza 3ra Secc, 94297 Boca del Río, Ver.</p>',
+                info: '<h3>Blvd. Fernando Gutiérrez Barrios #703, Tres Valles, Veracruz.</p>',
                 iconMap: iconBase + 'mapicon.png'
             }
         };
