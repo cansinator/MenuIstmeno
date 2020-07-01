@@ -109,8 +109,8 @@ a{
 	margin: auto;
 }
 header {
-	padding: 5px 0;
-	background: #00284d;
+	padding: 5px 0 5px 0;
+	background: #FF8901;
 }
 .contenedor {
 	padding: 15px;
