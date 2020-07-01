@@ -334,9 +334,9 @@ function instalar(){
   });
 
   function showInstallPromotion(){
-    $('#instalarApp').show();
+    $('#headerInstall').show();
   }
 
   function hideMyInstallPromotion(){
-    $('#instalarApp').hide();
+    $('#headerInstall').hide();
   }
