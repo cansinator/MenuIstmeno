@@ -212,7 +212,6 @@ function initMap() {
 
 function cargaYoutube(pagina) {
     $('#canvasMap').empty();
-
     document.getElementById("modalbox").style.display = "block";
     player = new YT.Player('canvasMap', {
         height: '100%',
@@ -221,7 +220,8 @@ function cargaYoutube(pagina) {
         events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
-        }
+        },
+        origin: window.location.host
     });
 }
 
