@@ -8,7 +8,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function initMap() {
     $(document).ready(function () {
-        var iconBase = '';
+        var iconBase = 'img/';
 
         var modal = document.getElementById("modalbox");
         var span = document.getElementsByClassName("close")[0];
@@ -19,38 +19,38 @@ function initMap() {
 
         menus = {
             pagina0: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-0.jpg'
+                icon: iconBase + 'menu-0.jpg'
             },
             pagina1: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-1.jpg',
+                icon: iconBase + 'menu-1.jpg',
                 youtube: "Dq0Fyz9tyUE"
             },
             pagina2: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-2.jpg',
+                icon: iconBase + 'menu-2.jpg',
                 youtube: "hXNObvj-m28"
             },
             pagina3: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-3.jpg',
+                icon: iconBase + 'menu-3.jpg',
                 youtube: "gkTM8wXEZG4"
             },
             pagina4: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-4.jpg',
+                icon: iconBase + 'menu-4.jpg',
                 youtube: "rX2eEa4LYoM"
             },
             pagina5: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-5.jpg',
+                icon: iconBase + 'menu-5.jpg',
                 youtube: "Zl-xOHG8bYM"
             },
             pagina6: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-6.jpg',
+                icon: iconBase + 'menu-6.jpg',
                 youtube: "klcj5UqyeEM"
             },
             pagina7: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-7.jpg',
+                icon: iconBase + 'menu-7.jpg',
                 youtube: "zJYCm7-4bH8"
             },
             pagina8: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-8.jpg',
+                icon: iconBase + 'menu-8.jpg',
                 cel: "href='https://wa.me/522871057572'",
                 tel: "href='tel: 522871057572'",
                 position: new google.maps.LatLng(18.089305, -96.135304),
@@ -58,7 +58,7 @@ function initMap() {
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina9: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-9.jpg',
+                icon: iconBase + 'menu-9.jpg',
                 cel: "href='https://wa.me/522871057572'",
                 tel: "href='tel: 529721110889'",
                 position: new google.maps.LatLng(18.082797, -96.120222),
@@ -66,7 +66,7 @@ function initMap() {
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina10: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-10.jpg',
+                icon: iconBase + 'menu-10.jpg',
                 cel: "href='https://wa.me/529721075154'",
                 tel: "href='tel: 529721075154'",
                 position: new google.maps.LatLng(20.5197462, -97.4430313),
@@ -74,7 +74,7 @@ function initMap() {
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina11: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-11.jpg',
+                icon: iconBase + 'menu-11.jpg',
                 cel: "href='https://wa.me/522299571515'",
                 tel: "href='tel: 522299571515'",
                 position: new google.maps.LatLng(19.130268, -96.122766),
@@ -82,7 +82,7 @@ function initMap() {
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina12: {
-                icon: iconBase + 'https://raw.githubusercontent.com/cansinator/MenuIstmeno/master/img/menu-12.jpg',
+                icon: iconBase + 'menu-12.jpg',
                 cel: "href='https://wa.me/522881285048'",
                 tel: "href='tel: 522881285048'",
                 position: new google.maps.LatLng(18.235195, -96.144031),
