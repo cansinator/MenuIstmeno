@@ -128,7 +128,7 @@ footer {
 	background: #fafafa;
 	color: #777;
 	font-size: 1.75em;
-	line-height: 1.25em;
+	/*line-height: 1.25em;*/
 	padding: 5px 0;
 	width: 100%;
 	z-index: 700;

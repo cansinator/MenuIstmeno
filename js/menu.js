@@ -141,13 +141,13 @@ function initMap() {
 
             if (index >= 8) {
                 var tienda = '"' + feature.type + '"';
-                infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-map-marker fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a id='instalarApp' onclick='instalar();'><i class='fa fa-download fa-6' aria-hidden='true' style='color: black;'></i></a></div></section></footer>";
+                infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-map-marker fa-6' style='color: black;'></i></a></div><div class='iconappfoot' id='instalarApp' onclick='instalar();'><i class='fa fa-download fa-1' aria-hidden='true' style='color: white;'></i><p style='color: white;'>APP</p></div></section></footer>";
 
                 var page = "<div class='swiper-slide'>" + infoTelFooter + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
                 $('#menuSwiper').append(page);
             } else if (index >= 1 && index <= 7) {
                 var tienda = '"' + feature.type + '"';
-                youtube = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a onclick='cargaYoutube(" + tienda + ")'><i class='fa fa-youtube fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a id='instalarApp' onclick='instalar();'><i class='fa fa-download fa-6' aria-hidden='true' style='color: black;'></i></a></div></section></footer>";
+                youtube = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a onclick='cargaYoutube(" + tienda + ")'><i class='fa fa-youtube fa-6' style='color: black;'></i></a></div><div class='iconappfoot' id='instalarApp' onclick='instalar();'><i class='fa fa-download fa-1' aria-hidden='true' style='color: white;'></i><p style='color: white;'>APP</p></div></section></footer>";
                 var page = "<div class='swiper-slide'>" + youtube + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
                 $('#menuSwiper').append(page);
             }
