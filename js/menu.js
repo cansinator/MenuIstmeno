@@ -51,40 +51,44 @@ function initMap() {
             },
             pagina8: {
                 icon: iconBase + 'menu-8.jpg',
-                cel: "href='https://wa.me/522871057572'",
-                tel: "href='tel: 522871057572'",
-                position: new google.maps.LatLng(18.089305, -96.135304),
-                info: '<h3>Carnitas El Istmeño</h3><p>Av. Francisco y Madero Esq. 5 de Febrero, Colonia María Eugenia.</p>',
-                iconMap: iconBase + 'mapicon.png'
+                youtube: "zJYCm7-4bH8"
             },
             pagina9: {
                 icon: iconBase + 'menu-9.jpg',
                 cel: "href='https://wa.me/522871057572'",
-                tel: "href='tel: 529721110889'",
-                position: new google.maps.LatLng(18.082797, -96.120222),
-                info: '<h3>Carnitas El Istmeño</h3><p>Av. Libertad 472-576, Centro, 68300 San Juan Bautista Tuxtepec, Oax.</p>',
+                tel: "href='tel: 2871057572'",
+                position: new google.maps.LatLng(18.089305, -96.135304),
+                info: '<h3>Carnitas El Istmeño</h3><p>Av. Francisco y Madero Esq. 5 de Febrero, Colonia María Eugenia.</p>',
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina10: {
                 icon: iconBase + 'menu-10.jpg',
-                cel: "href='https://wa.me/529721075154'",
-                tel: "href='tel: 529721075154'",
-                position: new google.maps.LatLng(20.5197462, -97.4430313),
-                info: '<h3>Carnitas El Istmeño</h3><p>HIDALGO No 506-A, Veracruz</p>',
+                cel: "href='https://wa.me/522871057572'",
+                tel: "href='tel: 9721110889'",
+                position: new google.maps.LatLng(18.082797, -96.120222),
+                info: '<h3>Carnitas El Istmeño</h3><p>Av. Libertad 472-576, Centro, 68300 San Juan Bautista Tuxtepec, Oax.</p>',
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina11: {
                 icon: iconBase + 'menu-11.jpg',
-                cel: "href='https://wa.me/522299571515'",
-                tel: "href='tel: 522299571515'",
-                position: new google.maps.LatLng(19.130268, -96.122766),
-                info: '<h3>Calle 8, Venustiano Carranza, Carranza 3ra Secc, 94297 Boca del Río, Ver.</p>',
+                cel: "href='https://wa.me/529721075154'",
+                tel: "href='tel: 9721075154'",
+                position: new google.maps.LatLng(20.5197462, -97.4430313),
+                info: '<h3>Carnitas El Istmeño</h3><p>HIDALGO No 506-A, Veracruz</p>',
                 iconMap: iconBase + 'mapicon.png'
             },
             pagina12: {
                 icon: iconBase + 'menu-12.jpg',
+                cel: "href='https://wa.me/522299571515'",
+                tel: "href='tel: 2299571515'",
+                position: new google.maps.LatLng(19.130268, -96.122766),
+                info: '<h3>Calle 8, Venustiano Carranza, Carranza 3ra Secc, 94297 Boca del Río, Ver.</p>',
+                iconMap: iconBase + 'mapicon.png'
+            },
+            pagina13: {
+                icon: iconBase + 'menu-13.jpg',
                 cel: "href='https://wa.me/522881285048'",
-                tel: "href='tel: 522881285048'",
+                tel: "href='tel: 2881285048'",
                 position: new google.maps.LatLng(18.235195, -96.144031),
                 info: '<h3>Blvd. Fernando Gutiérrez Barrios #703, Tres Valles, Veracruz.</p>',
                 iconMap: iconBase + 'mapicon.png'
@@ -130,6 +134,9 @@ function initMap() {
             },
             {
                 type: 'pagina12'
+            },
+            {
+                type: 'pagina13'
             }
         ];
 
@@ -139,7 +146,7 @@ function initMap() {
             var infoTelFooter = "";
             var c = "";
 
-            if (index >= 8) {
+            if (index >= 9) {
                 var tienda = '"' + feature.type + '"';
                 infoTelFooter = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a " + menus[feature.type].cel + "><i class='fa fa-whatsapp fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a " + menus[feature.type].tel + "><i class='fa fa-phone fa-6' style='color: black;'></i></a></div><div class='iconappfoot'><a onclick='cargaMap(" + tienda + ")'><i class='fa fa-map-marker fa-6' style='color: black;'></i></a></div><div class='iconappfoot' id='instalarApp' onclick='instalar();'><i class='fa fa-download fa-1' aria-hidden='true' style='color: white;'></i><p style='color: white;'>APP</p></div></section></footer>";
 
@@ -148,6 +155,11 @@ function initMap() {
             } else if (index >= 1 && index <= 7) {
                 var tienda = '"' + feature.type + '"';
                 youtube = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot'><a onclick='cargaYoutube(" + tienda + ")'><i class='fa fa-youtube fa-6' style='color: black;'></i></a></div><div class='iconappfoot' id='instalarApp' onclick='instalar();'><i class='fa fa-download fa-1' aria-hidden='true' style='color: white;'></i><p style='color: white;'>APP</p></div></section></footer>";
+                var page = "<div class='swiper-slide'>" + youtube + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
+                $('#menuSwiper').append(page);
+            } else if (index == 8) {
+                var tienda = '"' + feature.type + '"';
+                youtube = "<footer class='footapp'><section class='contfooter'><div class='iconappfoot' id='instalarApp' onclick='instalar();'><i class='fa fa-download fa-1' aria-hidden='true' style='color: white;'></i><p style='color: white;'>APP</p></div></section></footer>";
                 var page = "<div class='swiper-slide'>" + youtube + "<img src='" + menus[feature.type].icon + "' class='slideDimension'></div>";
                 $('#menuSwiper').append(page);
             }

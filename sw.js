@@ -22,6 +22,7 @@ const APP_SHELL  = [
     'img/menu-10.jpg',
     'img/menu-11.jpg',
     'img/menu-12.jpg',
+    'img/menu-13.jpg',
     'img/icons/icon-128x128.png',
     'img/icons/icon-144x144.png',
     'img/icons/icon-152x152.png',
